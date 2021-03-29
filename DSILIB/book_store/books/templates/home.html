@@ -1,0 +1,42 @@
+{% extends "base.html" %}.
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<!-- Search Bar-->
+<div class="jumbotron">
+    <h1 class="display-5">Welcome on DSI Library</h1>
+    <p class="lead">Create account and login to review, rent and rate books!</p>
+    <hr class="my-1">
+    <p>
+        <h5>Search book</h5>
+        <form class="searchForm" action="{% url 'search' %}" method=" GET">
+            <div class="form-group row">
+                <input class="form-control col-md-7" required="required" name="q" type="text" placeholder="Search title or author">
+                <span class="col-md-1"></span>
+                <button type="submit" class="btn btn-primary col-md-2">Search</button>
+            </div>
+        </form>
+
+    </p>
+</div>
+
+
+<hr class="my-4">
+<h2>Recenlty added books:</h2>
+<div class="row lastBooksContainer">
+    {% for book in book_list %}
+    <div class="col-md-4 bookCard">
+        <div class="cardBorder" style="border-radius: 15px;">
+            <img class="book_image" src="{{ book.image.url }}" alt="Book image">
+            <h5>{{ book.title }}</h5>
+            <h6>{{ book.author }}</h6>
+            <a href="#commentBox">Comments ({{ book.comments.count }})</a>
+
+            <a href="{% url 'bookDetail' slug=book.slug %}"><button class="btn btn-primary btn-xs">Book detail</button></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
