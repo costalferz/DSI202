@@ -17,9 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from myapp.views import BikeDetailView,CarDetailView
+from myapp.views import CarDetailView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('bike/<int:pk>', BikeDetailView.as_view(),name='bike'),
     path('car/<int:pk>', CarDetailView.as_view(),name='car'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

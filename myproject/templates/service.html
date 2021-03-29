@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Vip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="/static/assets/css/main.css?{% now "U" %}">
+	</head>
+	<body class="subpage">
+
+		{%if user.is_authenticated %}
+			<!-- Header -->
+				<header id="header">
+					<nav class="left">
+						<a href="#menu"><span>Menu</span></a>
+					</nav>
+					<a href="/" class="logo">VIP</a>
+					<nav class="right">
+						<a href="/logout" class="button alt">Log out</a>
+					</nav>
+				</header>
+	
+			<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/LearningCenter">Learning Center</a></li>
+						<li><a href="/service">Our Service</a></li>
+						<li><a href="/sign_up">Sign up</a></li>
+						<li><a href="/about">About us</a></li>					
+					</ul>
+					<ul class="actions vertical">
+						<li><a href="/logout" class="button fit">Log out</a></li>
+					</ul>
+				</nav>
+			{%else%}	
+			<!-- Header -->
+				<header id="header">
+					<nav class="left">
+						<a href="#menu"><span>Menu</span></a>
+					</nav>
+					<a href="/" class="logo">VIP</a>
+					<nav class="right">
+						<a href="/loginForm" class="button alt">Log in</a>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/LearningCenter">Learning Center</a></li>
+						<li><a href="/service">Our Service</a></li>
+						<li><a href="/sign_up">Sign up</a></li>
+						<li><a href="/about">About us</a></li>					
+					</ul>
+					<ul class="actions vertical">
+						<li><a href="/loginForm" class="button fit">Login</a></li>
+					</ul>
+				</nav>
+			{%endif%}
+
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center" style="padding-bottom: 50px">
+						<h1>Our Service Detial</h1>
+					<ul class="actions">
+						<li><a href="#buy" class="button scrolly">Buy now</a></li>
+					</ul>
+					</header>
+						<p><span class="image left"><img src="/static/images/planA.jpg" alt="" /></span>
+							<div style="padding-bottom: 50px"></div>
+							<div style="font-size:300%">Plan A</div></br> 
+							this plan only include : Logo design of your product or service</br>
+							we will provide and design client's new branding logo to make it outstanding and remarkable for your business. </br>
+							-color palettes picking </br>
+							-design elements</br> 
+							-object positioning</br> 
+							-name branding (if required)</br> 
+							price : entry 999 Bath (may have additional cost during process)</br>
+							(additional information please contact our service center)</br>
+						</br>
+						</br>
+						</p>
+						<p><span class="image right"><img src="/static/images/planB.jpg" alt="" /></span>
+							<div style="font-size:300%;">Plan B</div></br> 
+							this plan include : Logo design + Packaging design</br>
+							process in Plan A plus packaging design from our designer team to complete your brand with full option.</br>
+							-Plan A process</br>
+							-packaging design</br>
+							-type of packaging</br>
+							-product containers</br>
+							-brand's bag</br>
+							-material selection (if required)</br>
+							price : entry 1299 Bath (may have additional cost during process)</br>
+							(additional information please contact our service center)</br>
+						</p>
+						<p><span class="image left"><img src="/static/images/planC.jpg" alt="" /></span>
+							<div style="padding-bottom: 10px"></div>
+							<div style="font-size:300%">Plan C</div></br> 
+							this plan include : Logo design + Packagine design + Marketing plan</br>
+							this one is an altimate package that we offer to you with a combination of every design process
+							and strategy that every brand needed. 3 in 1business package that suitable for everyone
+							especially young entreperner and start up.</br>
+							-logo design (Plan A)</br>
+							-packaging design (Plan B)</br>
+							-marketing plan (Plan C)</br>
+							-business strategy</br>
+							-business model canvas</br>
+							-set goals and future development</br>
+							price : entry 4599 Bath (may have additional cost during process)</br>
+							(additional information please contact our service center)
+						</p>
+						<p><span class="image right"><img src="/static/images/mobile.png" alt=""  /></span>
+							<div style="font-size:300%;">Application</div></br> 
+							create your own application by our UX/UI designer team
+							to maximize your business efficiency with non-stop improvement you may need a good
+							application for more accessibility</br>
+							price : entry 7999 Bath (may have additional cost during process)</br>
+							(additional information please contact our service center)
+						</p>
+						<section id=buy>
+						{%if user.is_authenticated %}
+						<form method="post" action="buy">
+						{%else%}
+						<form method="post" action="please">
+						{%endif%}
+							{% csrf_token %}
+										<div class="row uniform">
+											<!-- Break -->
+											<div class="12u$">
+												<div class="select-wrapper">
+													<select name="package" id="package">
+														<option value="">- Choose Your Package -</option>
+														<option value="Package A">Package A</option>
+														<option value="Package B">Package B</option>
+														<option value="Package C">Package C</option>
+														<option value="Application Package">Application Package</option>
+													</select>
+												</div>
+											</div>
+											<!-- Break -->
+											<div class="12u$">
+												<textarea name="customer_tell" id="customer_tell" placeholder="Tell more" rows="6"></textarea>
+											</div>
+											<!-- Break -->
+											<div class="12u$">
+												<ul class="actions">
+													<li><input type="submit" value="Buy" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+						</section>
+			</section>
+
+									
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="vip">
+
+						<p>Our service center: +6638-422-099 <br />
+						Official line: @beourvipguest<br />
+						Facebook: VIP Very Important Person
+						</p>
+					<div>
+				<div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>

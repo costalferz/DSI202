@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Vip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="/static/assets/css/main.css?{% now "U" %}">
+	</head>
+	<body class="subpage">
+
+		{%if user.is_authenticated %}
+			<!-- Header -->
+				<header id="header">
+					<nav class="left">
+						<a href="#menu"><span>Menu</span></a>
+					</nav>
+					<a href="/" class="logo">VIP</a>
+					<nav class="right">
+						<a href="/logout" class="button alt">Log out</a>
+					</nav>
+				</header>
+	
+			<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/LearningCenter">Learning Center</a></li>
+						<li><a href="/service">Our Service</a></li>
+						<li><a href="/sign_up">Sign up</a></li>
+						<li><a href="/about">About us</a></li>					
+					</ul>
+					<ul class="actions vertical">
+						<li><a href="/logout" class="button fit">Log out</a></li>
+					</ul>
+				</nav>
+			{%else%}	
+			<!-- Header -->
+				<header id="header">
+					<nav class="left">
+						<a href="#menu"><span>Menu</span></a>
+					</nav>
+					<a href="/" class="logo">VIP</a>
+					<nav class="right">
+						<a href="/loginForm" class="button alt">Log in</a>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/LearningCenter">Learning Center</a></li>
+						<li><a href="/service">Our Service</a></li>
+						<li><a href="/sign_up">Sign up</a></li>
+						<li><a href="/about">About us</a></li>					
+					</ul>
+					<ul class="actions vertical">
+						<li><a href="/loginForm" class="button fit">Login</a></li>
+					</ul>
+				</nav>
+			{%endif%}
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h1>Our Learning Center</h1>
+					</header>
+					<div class="image fit">
+						<div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-pause-on-hover="true">
+							
+							<span class="cycle-prev">&laquo;</span>
+							<span class="cycle-next">&raquo;</span>
+							
+							<span class="cycle-pager"></span>
+
+							<div class="slide">
+								<img src="/static/images/Apple-1.jpg" alt="Bee">
+
+								<div class="slide-text">
+									<h3>Rebranding Example</h3>
+									<p>Apple </br> </br> <a href="https://www.threerooms.com/benefits-of-rebranding-your-business/" class="btn-a" target="_blank">Learn More!</a> </p>
+								</div>
+
+							</div>
+
+							
+							<div class="slide">
+								<img src="/static/images/Insta-1.jpg" alt="Bee">
+
+								<div class="slide-text">
+									<h3>Rebranding Example</h3>
+									<p>Instragram </br> </br> <a href="https://www.threerooms.com/benefits-of-rebranding-your-business/" class="btn-a" target="_blank">Learn More!</a> </p>
+								</div>
+
+							</div>
+
+							<div class="slide">
+								<img src="/static/images/Coke-share-1.jpg" alt="Bee">
+
+								<div class="slide-text">
+									<h3>Rebranding Example</h3>
+									<p>CoCa - Cola </br> </br> <a href="https://www.threerooms.com/benefits-of-rebranding-your-business/" class="btn-a" target="_blank">Learn More!</a> </p>
+								</div>
+
+							</div>
+
+							<div class="slide">
+								<img src="/static/images/Microsoft-1.jpg" alt="Bee">
+
+								<div class="slide-text">
+									<h3>Rebranding Example</h3>
+									<p>Microsoft </br> </br> <a href="https://www.threerooms.com/benefits-of-rebranding-your-business/" class="btn-a" target="_blank">Learn More!</a> </p>
+								</div>
+
+							</div>
+
+							
+													<!-- Table -->
+									<h3></br>Other Knodlegde</h3>
+
+									<h4>Blog Content</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Link</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>RE- branding </td>
+													<td>Benefit of Re-branding</td>
+													<td><a href="https://www.threerooms.com/benefits-of-rebranding-your-business/" target="_blank">CLICK</a></td>
+												</tr>
+												<tr>
+													<td>Star Logo </td>
+													<td>Top 10 Star LOGO </td>
+													<td><a href="https://www.spellbrand.com/top-10-star-logo-designs" target="_blank">CLICK</a></td>
+												</tr>
+												<tr>
+													<td>Marketing 2020</td>
+													<td>THE TOP MARKETING TRENDS FOR 2020</td>
+													<td><a href=" https://www.spellbrand.com/top-marketing-trends" target="_blank">CLICK</a></td>
+												</tr>
+												<tr>
+													<td>Brand Image </td>
+													<td>5 Technic for Brand Image Creator</td>
+													<td><a href="https://www.marketingoops.com/exclusive/how-to/5-tips-to-build-brand-image/" target="_blank">CLICK</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<h4></br>Video Content </br></h4>
+										<div>
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/XhMVWzVXNNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe width="560" height="315" src="https://www.youtube.com/embed/tF9r9LrOb70" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+										</div>
+							</div>
+			</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="vip">
+
+						<p>Our service center: +6638-422-099 <br />
+						Official line: @beourvipguest<br />
+						Facebook: VIP Very Important Person
+						</p>
+					<div>
+				<div>
+			</footer>
+
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+			<script type="text/javascript" src="/static/assets/js/jquery.js"></script>
+			<script type="text/javascript" src="/static/assets/js/cycle2.js"></script>
+			<h1><input type="button"></h1>
+	</body>
+</html>
